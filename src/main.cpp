@@ -2,7 +2,7 @@
 #include "gif-pros/gifclass.hpp"
 #include "lemlib/asset.hpp"
 #include "pros/rtos.hpp"
-#include "robotconfig.h"
+//#include "robotconfig.h"
 
 ASSET(david_gif)
 ASSET(skillsmatchload_txt)
@@ -15,11 +15,11 @@ void initialize() {
   pros::delay(500);
 }
 
-void autonomous() { chassis.follow(skillsmatchload_txt, 5000, 5); }
+void autonomous() {}
 
 void disabled() {
-  intakeLED.gradient(0xFF0000, 0xFF0005, 0, 0, false, true);
-  intakeLED.cycle(*intakeLED, 5);
+  //intakeLED.gradient(0xFF0000, 0xFF0005, 0, 0, false, true);
+  //intakeLED.cycle(*intakeLED, 5);
 
   // Store the time at the start of the loop
   std::uint32_t clock = sylib::millis();
